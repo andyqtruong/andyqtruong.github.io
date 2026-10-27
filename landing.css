@@ -39,4 +39,5 @@ body{background-image:var(--paper-grid)}
 
 /* Transparent paper-backed display in both states; keep the CAD silhouette intact. */
 .project-visual.car-visual.engineering-drawing,.project-card:hover .car-visual.engineering-drawing{background:transparent}
-.psr-render-reveal svg{filter:url(#psr-cutout-clean)}
+
+
