@@ -19,3 +19,8 @@
 
 body{background-image:var(--paper-grid)}
 .skip-link{background:var(--ink);color:var(--bg)}
+
+/* Keep the full drawing sheet visible and let its paper blend into the card. */
+.project-visual.engineering-drawing{background:var(--bg);padding:18px 30px}
+.engineering-drawing img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.project-card:hover .engineering-drawing{background:var(--surface)}
