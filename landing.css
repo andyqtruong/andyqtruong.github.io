@@ -8,13 +8,13 @@
 
 .home-placeholder{font-size:13px;font-weight:500;letter-spacing:normal}.home-placeholder:hover{color:var(--accent)}
 
-/* Reveal navy lettering and maize together beneath one moving edge. */
+/* Reveal white lettering and Texas A&M maroon together beneath one moving edge. */
 .hero-greeting{margin:0 0 18px;color:var(--ink);font-size:18px;line-height:1.5}
 .hero-name{width:fit-content;max-width:100%;line-height:1.05}
 .name-line{position:relative;display:block;width:fit-content;padding:0 .06em .08em;margin-left:-.06em}
-.name-highlight{position:absolute;inset:0;background:#ffcb05;color:#081526;padding:inherit;clip-path:inset(0 100% 0 0);transition:clip-path .55s cubic-bezier(.22,.61,.36,1);pointer-events:none}
+.name-highlight{position:absolute;inset:0;background:#500000;color:#fff;padding:inherit;clip-path:inset(0 100% 0 0);transition:clip-path .55s cubic-bezier(.22,.61,.36,1);pointer-events:none}
 .hero-name:is(:hover,:focus-visible) .name-highlight{clip-path:inset(0)}
-.hero-name:focus-visible{outline:2px solid #ffcb05;outline-offset:8px}
+.hero-name:focus-visible{outline:2px solid #500000;outline-offset:8px}
 @media(prefers-reduced-motion:reduce){.name-highlight{transition:none}}
 
 body{background-image:var(--paper-grid)}
