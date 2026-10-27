@@ -4,7 +4,7 @@ const models=[...document.querySelectorAll('model-viewer[data-warwolf]')];
 if(models.length){
  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
  try{
-  await import('./assets/vendor/model-viewer.min.js');
+  await import('./model-runtime.js');
   for(const viewer of models){
    const cover=viewer.hasAttribute('data-cover'),container=viewer.parentElement,section=viewer.closest('.warwolf-model');
    const launchButton=section?.querySelector('.warwolf-launch'),status=section?.querySelector('.warwolf-status');

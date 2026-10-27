@@ -140,7 +140,7 @@ if (section) {
     poster.querySelector('p').textContent = 'Loading the 3D model…';
     try {
       const [, response] = await Promise.all([
-        import('./assets/vendor/model-viewer.min.js'),
+        import('./model-runtime.js'),
         fetch(section.dataset.modelLabels)
       ]);
       if (!response.ok) throw new Error('Component data could not load');
