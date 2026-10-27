@@ -1,4 +1,5 @@
-@import url('https://api.fontshare.com/v2/css?f[]=switzer@1&display=swap');
+@font-face{font-family:'Motiva Sans';src:local('Motiva Sans Regular'),url('https://store.akamai.steamstatic.com/public/shared/fonts/MotivaSans-Regular.woff.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Motiva Sans';src:local('Motiva Sans Bold'),url('https://store.akamai.steamstatic.com/public/shared/fonts/MotivaSans-Bold.woff.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
 
 /* Shared navy and white palette. */
 :root {
