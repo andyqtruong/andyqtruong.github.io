@@ -1,0 +1,2078 @@
+{
+  "labels": [
+    {
+      "id": "perfboard",
+      "title": "Perfboard",
+      "description": "The soldered perfboard connects the Arduino, sensors, and logging modules through removable headers. It replaced the prototype breadboard, but the tight wiring clearance made assembly and troubleshooting difficult. A future version would combine the electronics on a single PCB.",
+      "position": [
+        -0.009215717203914382,
+        0.027009954184294135,
+        -0.13944791629910472
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009215717203914382,
+        0.004009953234344667,
+        -0.13944791629910472
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Electronics"
+    },
+    {
+      "id": "wheel-speed",
+      "title": "Wheel-speed sensor mount",
+      "description": "This mount positions an A3144 Hall-effect sensor near the wheel hub. Two magnets in each hub were intended to trigger the sensor as the wheel turned, allowing the Arduino to calculate wheel speed. The sensors worked on the breadboard but failed in the installed circuit. This CAD export includes the mount; the sensor and magnets are not modeled as separate parts.",
+      "position": [
+        0.06567695556278753,
+        -0.002543352514744519,
+        0.005119720260979245
+      ],
+      "normal": "0 1 0",
+      "target": [
+        0.06567695556278753,
+        -0.009708676612882057,
+        0.005119720260979245
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Electronics"
+    },
+    {
+      "id": "suspension",
+      "title": "Front suspension",
+      "description": "Printed control arms and knuckles form the front double-wishbone suspension. Caster and kingpin inclination help the wheels self-center. The knuckles were the main failure point during impacts.",
+      "position": [
+        0.03411735377917528,
+        -0.008215927289945035,
+        -0.0022650190973234376
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.00918404939179561,
+        -0.0155214873776524,
+        -0.003191050298689083
+      ],
+      "orbit": "0deg 87deg 0.48m",
+      "category": "Suspension"
+    },
+    {
+      "id": "aero",
+      "title": "Aerodynamics",
+      "description": "The wings and floor were designed to fit the completed chassis. Their shapes were limited by printing and packaging constraints, and aerodynamic performance was not validated with CFD.",
+      "position": [
+        -0.009115717373788357,
+        -0.025607902117073523,
+        0.09377565607428553
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009115717373788357,
+        -0.031493125483393655,
+        0.09377565607428553
+      ],
+      "orbit": "45deg 55deg 0.16m"
+    },
+    {
+      "id": "drive",
+      "title": "Rear drivetrain",
+      "description": "The motor drives a differential and CV axles at the rear wheels. This arrangement lets the wheels turn at different speeds through a corner.",
+      "position": [
+        -0.00921571720391512,
+        0.009159196612723726,
+        -0.33744791150093084
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.00921571720391512,
+        -0.0058400477282703495,
+        -0.33744791150093084
+      ],
+      "orbit": "45deg 55deg 0.16m"
+    },
+    {
+      "id": "motor",
+      "title": "Brushless motor",
+      "description": "A DYS D3542 brushless outrunner powers the car from a 14.8 V battery. Its 1450 KV rating describes no-load speed per volt; it does not predict the car’s speed under load. Ground testing reached about 30 mph.",
+      "position": [
+        -0.009215717203915088,
+        0.014651037649785707,
+        -0.2671979162842036
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009215717203915088,
+        -0.005840047728270346,
+        -0.2671979162842036
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Drivetrain"
+    },
+    {
+      "id": "battery",
+      "title": "LiPo battery",
+      "description": "The 14.8 V LiPo powers the motor through the speed controller. A 5 V supply serves the electronics, and a separate UBEC supplies 7 V to the steering servo.",
+      "position": [
+        -0.008778695948422757,
+        0.0189249518765145,
+        -0.19319757819175726
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.008778695948422757,
+        -0.0012400486157276742,
+        -0.19319757819175726
+      ],
+      "orbit": "45deg 55deg 0.20409999713301688m",
+      "category": "Electronics"
+    },
+    {
+      "id": "controller",
+      "title": "Arduino Nano",
+      "description": "The Arduino Nano processes radio commands, controls throttle and steering, and collects data for logging. It replaced the larger Uno used during prototyping.",
+      "position": [
+        -0.009215717203914441,
+        0.02652995052933702,
+        -0.1286479197442532
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009215717203914441,
+        0.0019299513660370818,
+        -0.1286479197442532
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Electronics"
+    },
+    {
+      "id": "steering",
+      "title": "Steering servo",
+      "description": "The servo moves the front wheels through the steering linkage. The suspension geometry helps the wheels return to center, improving straight-line stability despite play in the printed joints.",
+      "position": [
+        -0.00921571720391512,
+        0.020663374543189995,
+        -0.0724141597747803
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.00921571720391512,
+        0.0011633748654275994,
+        -0.0724141597747803
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Steering"
+    },
+    {
+      "id": "esc",
+      "title": "Speed controller",
+      "description": "The FlyColor 50 A electronic speed controller regulates motor power. It was designed for drones and did not provide regenerative braking in this build.",
+      "position": [
+        -0.009215717087499731,
+        0.04815995382098517,
+        -0.20998258143663417
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009215717087499731,
+        0.03715995381935516,
+        -0.20998258143663417
+      ],
+      "orbit": "45deg 55deg 0.20799999535083816m",
+      "category": "Electronics"
+    },
+    {
+      "id": "imu",
+      "title": "IMU",
+      "description": "The MPU6050 measures acceleration and orientation during test runs. Those readings are recorded alongside the driver’s control inputs.",
+      "position": [
+        0.012857593595981973,
+        -0.015840047530830074,
+        -0.12430405616760251
+      ],
+      "normal": "0 1 0",
+      "target": [
+        0.012857593595981973,
+        -0.0193400476127866,
+        -0.12430405616760251
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Electronics"
+    },
+    {
+      "id": "logger",
+      "title": "SD data logger",
+      "description": "A microSD module stores the test logs. A startup counter in the Arduino’s EEPROM gives each run a separate CSV filename.",
+      "position": [
+        -0.009223583620041609,
+        0.03059379521012304,
+        -0.11507292091846466
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009223583620041609,
+        0.006693795556202507,
+        -0.11507292091846466
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Electronics"
+    },
+    {
+      "id": "front-wing",
+      "title": "Front wing",
+      "description": "The front wing was intended to generate downforce and redirect air around the front tires. It broke during testing before its aerodynamic performance could be properly evaluated.",
+      "position": [
+        -0.009115717373788357,
+        -0.025607902117073523,
+        0.09377565607428553
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.00921571720391512,
+        -0.016341307666152705,
+        0.07403592579066755
+      ],
+      "orbit": "15deg 65deg 0.68m"
+    },
+    {
+      "id": "rear-wing",
+      "title": "Rear wing",
+      "description": "The rear wing was designed for downforce, with a relatively simple shape that could be printed. Its contribution was not measured separately.",
+      "position": [
+        -0.009115717373788357,
+        0.07050342249870294,
+        -0.3866851190105081
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009115717373788357,
+        0.06046154350042336,
+        -0.3866851190105081
+      ],
+      "orbit": "45deg 55deg 0.34787999987602236m"
+    },
+    {
+      "id": "floor",
+      "title": "Floor / underbody",
+      "description": "Two Venturi tunnels and side skirts form the underbody design. The flat chassis and limited ride height restricted the tunnel geometry. Select this label to view the underside.",
+      "position": [
+        -0.00921571720391589,
+        -0.04184004801511801,
+        -0.17244809493422497
+      ],
+      "normal": "0 -1 0",
+      "target": [
+        -0.00921571720391589,
+        -0.03434004820883241,
+        -0.17244809493422497
+      ],
+      "orbit": "45deg 125deg 0.75m"
+    },
+    {
+      "id": "diffuser",
+      "title": "Rear diffuser",
+      "description": "The diffuser expands the underbody flow path at the rear of the floor. Its geometry had to fit around the chassis and drivetrain; its aerodynamic effect was not measured separately.",
+      "position": [
+        -0.009215717203915005,
+        -0.01284004866890574,
+        -0.36369790788739925
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009215717203915005,
+        -0.02584004902746539,
+        -0.3399479063227773
+      ],
+      "orbit": "160deg 115deg 0.58m"
+    },
+    {
+      "id": "rear-suspension",
+      "title": "Rear suspension",
+      "description": "The rear double wishbones use anti-squat geometry to reduce ride-height changes under acceleration. The geometry still allows some squat and suspension travel over bumps.",
+      "position": [
+        0.033914401548087315,
+        -0.012733668224735425,
+        -0.3386979112401605
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.008902032158486783,
+        -0.01885139248082479,
+        -0.3386979112401605
+      ],
+      "orbit": "180deg 87deg 0.48m",
+      "category": "Suspension"
+    },
+    {
+      "id": "sidepod",
+      "title": "Sidepods",
+      "description": "These printed body panels enclose components beside the chassis. Their shape follows the mechanical layout established earlier in the build.",
+      "position": [
+        0.04554928187280876,
+        0.028359950959681964,
+        -0.1184449866414069
+      ],
+      "normal": "0 1 0",
+      "target": [
+        0.04554928187280876,
+        -0.0022400487214333936,
+        -0.1184449866414069
+      ],
+      "orbit": "45deg 55deg 0.16m"
+    },
+    {
+      "id": "differential",
+      "title": "Differential",
+      "description": "The differential lets the driven rear wheels turn at different speeds in a corner. It is supported by ball bearings inside the rear suspension mount.",
+      "position": [
+        -0.00921571720391512,
+        0.009159196612723726,
+        -0.33744791150093084
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.00921571720391512,
+        -0.0058400477282703495,
+        -0.33744791150093084
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Drivetrain"
+    },
+    {
+      "id": "fan",
+      "title": "Cooling fan",
+      "description": "Printed mounts position the fan near the motor. The Cooling view makes the surrounding ducting translucent so both components are visible.",
+      "position": [
+        -0.009215717203915105,
+        0.021159951781854217,
+        -0.22624791134148842
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009215717203915105,
+        -0.0018400477711111776,
+        -0.22624791134148842
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Cooling"
+    },
+    {
+      "id": "fan-mount",
+      "title": "Printed fan mounts",
+      "description": "Printed brackets hold the cooling fan beside the motor.",
+      "position": [
+        -0.02834324212744832,
+        0.021342847470194055,
+        -0.22494791261851793
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.02834324212744832,
+        -0.0017486005090177562,
+        -0.22494791261851793
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Cooling"
+    },
+    {
+      "id": "ducting",
+      "title": "Motor ducting",
+      "description": "Printed ducting surrounds the motor area. It becomes translucent in the Cooling view to reveal the components inside.",
+      "position": [
+        -0.02271388377994299,
+        0.023159952808171465,
+        -0.26094791200011974
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.02271388377994299,
+        0.0021599526517092626,
+        -0.26094791200011974
+      ],
+      "orbit": "45deg 55deg 0.20539999492466451m"
+    },
+    {
+      "id": "shaft",
+      "title": "Drive input shaft",
+      "description": "A short 4 mm hex shaft and 5 mm coupler connect the motor to the differential. The coupler relies on friction against the smooth motor shaft; stripped screws caused repeated replacement.",
+      "position": [
+        -0.009215717203915098,
+        0.0031597590076778244,
+        -0.317197937052697
+      ],
+      "normal": "0 1 0",
+      "target": [
+        -0.009215717203915098,
+        -0.005840051453560664,
+        -0.317197937052697
+      ],
+      "orbit": "45deg 55deg 0.16m",
+      "category": "Drivetrain"
+    },
+    {
+      "id": "halfshafts",
+      "title": "Halfshafts / CV axles",
+      "description": "The paired shafts carry torque from the differential to the rear hubs. Their articulated joints accommodate the movement of the rear suspension.",
+      "category": "Drivetrain",
+      "position": [
+        -0.009001696724779781,
+        -0.00044108684815313565,
+        -0.33734398832245444
+      ],
+      "target": [
+        -0.009001696724779781,
+        -0.012394462072630143,
+        -0.33734398832245444
+      ],
+      "normal": "0 1 0",
+      "orbit": "175deg 65deg 0.48m"
+    },
+    {
+      "id": "rear-hub",
+      "title": "Rear wheel hubs",
+      "description": "The driven hubs connect the halfshafts to the rear wheels. The wheels are hidden in this view to expose the hub geometry.",
+      "category": "Suspension",
+      "position": [
+        0.07449976842370623,
+        -0.013286161557405104,
+        -0.33721218817093745
+      ],
+      "target": [
+        0.06875646023525939,
+        -0.013286161557405104,
+        -0.33721218817093745
+      ],
+      "normal": "1 0 0",
+      "orbit": "90deg 80deg 0.18m"
+    },
+    {
+      "id": "magnet-pockets",
+      "title": "Wheel-speed magnet pockets",
+      "description": "The cutouts in the printed wheel hub locate the two wheel-speed magnets. The Hall-effect sensor reads their passage. Select this label to look at the exposed hub; the magnets themselves are not separate parts in this export.",
+      "category": "Suspension",
+      "position": [
+        0.07796706557750048,
+        -0.010757066076788061,
+        -0.0037816699732444344
+      ],
+      "target": [
+        0.07172224533309135,
+        -0.010757066076788061,
+        -0.0037816699732444344
+      ],
+      "normal": "1 0 0",
+      "orbit": "75deg 75deg 0.13m"
+    },
+    {
+      "id": "side-intakes",
+      "title": "Left sidepod intake",
+      "description": "The front opening of the left sidepod admits air into the body and the motor cooling path. The marker sits at the inlet mouth, ahead of the internal scoop.",
+      "category": "Cooling",
+      "position": [
+        0.04700815584510541,
+        -0.002253742888570588,
+        -0.09001346981525407
+      ],
+      "target": [
+        0.04700815584510541,
+        -0.002253742888570588,
+        -0.09901346981525407
+      ],
+      "normal": "0 0 1",
+      "orbit": "25deg 77deg 0.42m"
+    },
+    {
+      "id": "side-intake-right",
+      "title": "Right sidepod intake",
+      "description": "The front opening of the right sidepod admits air into the body and the motor cooling path. The marker sits at the inlet mouth, ahead of the internal scoop.",
+      "category": "Cooling",
+      "position": [
+        -0.06543959025293589,
+        -0.0022537428885698527,
+        -0.09001346981525421
+      ],
+      "target": [
+        -0.06543959025293589,
+        -0.0022537428885698527,
+        -0.0990134698152542
+      ],
+      "normal": "0 0 1",
+      "orbit": "-25deg 77deg 0.42m"
+    },
+    {
+      "id": "top-intake",
+      "title": "Top air intake",
+      "description": "The forward-facing opening in the raised top cover provides another air path into the body. The marker sits in the opening instead of on the rear of the cover. Its contribution to cooling was not measured separately.",
+      "category": "Cooling",
+      "position": [
+        -0.009053182788193104,
+        0.052735514938831114,
+        -0.1357274905443192
+      ],
+      "target": [
+        -0.009053182788193104,
+        0.04773551493883112,
+        -0.14772749054431922
+      ],
+      "normal": "0 0 1",
+      "orbit": "0deg 65deg 0.46m"
+    },
+    {
+      "id": "shark-fin",
+      "title": "Shark fin",
+      "description": "The thin vertical fin runs along the top cover ahead of the rear wing. It is part of the cover in this CAD assembly.",
+      "category": "Aerodynamics",
+      "position": [
+        -0.0062157171801654094,
+        0.05897930450737472,
+        -0.2543052951805294
+      ],
+      "target": [
+        -0.009215717203914307,
+        0.05897930450737472,
+        -0.2543052951805294
+      ],
+      "normal": "1 0 0",
+      "orbit": "70deg 75deg 0.38m"
+    },
+    {
+      "id": "bargeboards",
+      "title": "Bargeboards",
+      "description": "The bargeboards sit ahead of the sidepods. The helical guides illustrate possible rolled-up edge flow moving downstream; they are a visualization of the design intent, not CFD results.",
+      "category": "Aerodynamics",
+      "position": [
+        -0.009215465281158686,
+        0.004159951090812673,
+        -0.06936191593963238
+      ],
+      "target": [
+        -0.009215465281158686,
+        -0.014340048655867596,
+        -0.06936191593963238
+      ],
+      "normal": "0 1 0",
+      "orbit": "35deg 65deg 0.7m"
+    },
+    {
+      "id": "floor-edge",
+      "title": "Floor leading edge / edge vortices",
+      "description": "The front of the floor and its outer edges are shown with illustrative vortex paths. The actual flow structure and its strength would require simulation or flow testing.",
+      "category": "Aerodynamics",
+      "position": [
+        -0.00921571720391589,
+        -0.04084004801511801,
+        -0.0874479198455809
+      ],
+      "target": [
+        -0.00921571720391589,
+        -0.038840048015118006,
+        -0.0874479198455809
+      ],
+      "normal": "0 -1 0",
+      "orbit": "25deg 115deg 0.7m"
+    },
+    {
+      "id": "ackermann",
+      "title": "Ackermann",
+      "description": "The front wheels steer through different angles to follow their respective turning radii. Front wheel-angle readouts include 2.07° of static toe per wheel. Rear headings follow the fixed rear hub orientations. Drag the steering wheel to rotate the central steering mechanism. The tie rods keep their length and turn the knuckles about their ball joints. The animation uses joint positions from the CAD.",
+      "category": "Geometry",
+      "position": [
+        -0.009190277352187262,
+        0.043,
+        -0.003632339803377237
+      ],
+      "target": [
+        -0.009190277352187262,
+        0.01,
+        -0.15547602325235998
+      ],
+      "normal": "0 1 0",
+      "orbit": "180deg 8deg 1.18m",
+      "guideVariant": "Dynamics / ackermann",
+      "guideLabels": [
+        {
+          "title": "Right wheel",
+          "position": [
+            -0.09010280003746587,
+            0.051,
+            0.04136766019662276
+          ]
+        },
+        {
+          "title": "Left wheel",
+          "position": [
+            0.07172224533309135,
+            0.051,
+            0.04136766019662276
+          ]
+        },
+        {
+          "title": "Rear axle",
+          "position": [
+            -0.009190277352187262,
+            0.043,
+            -0.37231970670134273
+          ],
+          "reference": true
+        }
+      ],
+      "axleViews": {
+        "both": {
+          "target": [
+            -0.009190277352187262,
+            0.01,
+            -0.15547602325235998
+          ],
+          "orbit": "180deg 8deg 1.18m"
+        },
+        "front": {
+          "target": [
+            -0.009190277352187262,
+            0.015,
+            -0.003632339803377237
+          ],
+          "orbit": "180deg 8deg .65m"
+        },
+        "rear": {
+          "target": [
+            -0.009190277352187262,
+            0.015,
+            -0.33731970670134276
+          ],
+          "orbit": "180deg 8deg .65m"
+        }
+      }
+    },
+    {
+      "id": "caster",
+      "title": "Caster",
+      "description": "Caster is the steering-axis tilt in side view. The gold axis passes through the front knuckle’s upper and lower ball joints. The outboard projection compares its fore–aft tilt with the dashed vertical reference. Rear guides show the corresponding upright joint-axis tilt; the rear wheels do not steer.",
+      "category": "Geometry",
+      "position": [
+        0.06973441212983945,
+        0.025701015196259915,
+        -0.0030664206790819437
+      ],
+      "target": [
+        0.07023935278417537,
+        0.025,
+        -0.17049692907209094
+      ],
+      "normal": "0 1 0",
+      "orbit": "90deg 80deg .8m",
+      "guideVariant": "Dynamics / caster",
+      "guideLabels": [
+        {
+          "title": "Steering axis",
+          "position": [
+            0.04538709325506087,
+            0.05285787567378961,
+            -0.014850153619346277
+          ],
+          "reference": false,
+          "angle": false,
+          "axle": "front"
+        },
+        {
+          "title": "Vertical",
+          "position": [
+            0.09418264722741845,
+            0.06878166693232307,
+            -0.0007299337982108042
+          ],
+          "reference": true,
+          "angle": false,
+          "axle": "front"
+        },
+        {
+          "title": "10.25°",
+          "position": [
+            0.09418264722741845,
+            0.04478166693232308,
+            -0.0457299337982108
+          ],
+          "reference": false,
+          "angle": true,
+          "axle": "front"
+        },
+        {
+          "title": "3.69°",
+          "position": [
+            0.09372031632429628,
+            0.03975317229314693,
+            -0.3824473325989001
+          ],
+          "angle": true,
+          "axle": "rear"
+        }
+      ],
+      "axleViews": {
+        "front": {
+          "target": [
+            0.06973441212983945,
+            0.005701015196259915,
+            -0.0030664206790819437
+          ],
+          "orbit": "90deg 86deg .48m"
+        },
+        "rear": {
+          "target": [
+            0.06676862703200748,
+            0.003171919715642872,
+            -0.33649693887677495
+          ],
+          "orbit": "90deg 86deg .48m"
+        },
+        "both": {
+          "target": [
+            0.07023935278417537,
+            0.025,
+            -0.17049692907209094
+          ],
+          "orbit": "90deg 80deg .8m"
+        }
+      }
+    },
+    {
+      "id": "kpi",
+      "title": "Kingpin Inclination",
+      "description": "KPI is the steering-axis tilt in front view. The gold line joins the upper and lower knuckle joints; its front-view projection shows the inward tilt against vertical. This is a different axis from the wheel’s camber. Rear guides show the corresponding upright joint-axis tilt; the rear wheels do not steer.",
+      "category": "Geometry",
+      "position": [
+        0.06973441212983945,
+        0.025701015196259915,
+        -0.0030664206790819437
+      ],
+      "target": [
+        0.07023935278417537,
+        0.025,
+        -0.17049692907209094
+      ],
+      "normal": "0 1 0",
+      "orbit": "40deg 72deg .9m",
+      "guideVariant": "Dynamics / kpi",
+      "guideLabels": [
+        {
+          "title": "Steering axis",
+          "position": [
+            0.04538709325506087,
+            0.05285787567378961,
+            -0.014850153619346277
+          ],
+          "reference": false,
+          "angle": false,
+          "axle": "front"
+        },
+        {
+          "title": "Vertical",
+          "position": [
+            0.060182647227418444,
+            0.06878166693232307,
+            0.0342700662017892
+          ],
+          "reference": true,
+          "angle": false,
+          "axle": "front"
+        },
+        {
+          "title": "10.73°",
+          "position": [
+            0.030182647227418445,
+            0.029781666932323075,
+            0.0342700662017892
+          ],
+          "reference": false,
+          "angle": true,
+          "axle": "front"
+        },
+        {
+          "title": "8.81°",
+          "position": [
+            0.02972031632429628,
+            0.024753172293146924,
+            -0.3024473325989001
+          ],
+          "angle": true,
+          "axle": "rear"
+        }
+      ],
+      "axleViews": {
+        "front": {
+          "target": [
+            0.06973441212983945,
+            0.005701015196259915,
+            -0.0030664206790819437
+          ],
+          "orbit": "0deg 87deg .46m"
+        },
+        "rear": {
+          "target": [
+            0.06676862703200748,
+            0.003171919715642872,
+            -0.33649693887677495
+          ],
+          "orbit": "0deg 87deg .46m"
+        },
+        "both": {
+          "target": [
+            0.07023935278417537,
+            0.025,
+            -0.17049692907209094
+          ],
+          "orbit": "40deg 72deg .9m"
+        }
+      }
+    },
+    {
+      "id": "camber",
+      "title": "Camber",
+      "description": "Camber is the wheel plane’s tilt from vertical in front view. The gold ring follows the wheel plane derived from the CAD hub face. The reference lines compare that plane with vertical; the angle is projected from the exported CAD pose. Both front and rear wheel planes are shown.",
+      "category": "Geometry",
+      "position": [
+        0.08372224533309135,
+        0.02124293392321194,
+        -0.0037816699732444344
+      ],
+      "target": [
+        0.07023935278417537,
+        0.025,
+        -0.17049692907209094
+      ],
+      "normal": "0 1 0",
+      "orbit": "40deg 72deg .9m",
+      "guideVariant": "Dynamics / camber",
+      "guideLabels": [
+        {
+          "title": "Wheel plane",
+          "position": [
+            0.09293972896050759,
+            0.05318241783289253,
+            0.022218330026755564
+          ],
+          "reference": false,
+          "angle": false,
+          "axle": "front"
+        },
+        {
+          "title": "Vertical",
+          "position": [
+            0.12172224533309134,
+            0.044242933923211936,
+            0.022218330026755564
+          ],
+          "reference": true,
+          "angle": false,
+          "axle": "front"
+        },
+        {
+          "title": "2.49°",
+          "position": [
+            0.12572224533309134,
+            0.01424293392321194,
+            0.022218330026755564
+          ],
+          "reference": false,
+          "angle": true,
+          "axle": "front"
+        },
+        {
+          "title": "2.86°",
+          "position": [
+            0.12275646023525938,
+            0.011713838442594897,
+            -0.31121218817093743
+          ],
+          "angle": true,
+          "axle": "rear"
+        }
+      ],
+      "axleViews": {
+        "front": {
+          "target": [
+            0.08372224533309135,
+            0.001242933923211939,
+            -0.0037816699732444344
+          ],
+          "orbit": "0deg 88deg .44m"
+        },
+        "rear": {
+          "target": [
+            0.0807564602352594,
+            -0.001286161557405104,
+            -0.33721218817093745
+          ],
+          "orbit": "0deg 88deg .44m"
+        },
+        "both": {
+          "target": [
+            0.07023935278417537,
+            0.025,
+            -0.17049692907209094
+          ],
+          "orbit": "40deg 72deg .9m"
+        }
+      }
+    },
+    {
+      "id": "toe",
+      "title": "Toe",
+      "description": "Toe is the wheel’s heading relative to the car’s centerline in top view. Toe-out is positive; toe-in is negative. Static toe is set to +2.07° per wheel. Gold arrows show the wheel headings above the front axle; dashed white lines point straight ahead. Rear readouts follow the fixed rear hub orientations.",
+      "category": "Geometry",
+      "position": [
+        -0.009190277352187262,
+        0.05765475077531532,
+        -0.003632339803377237
+      ],
+      "target": [
+        0.07023935278417537,
+        0.025,
+        -0.17049692907209094
+      ],
+      "normal": "0 1 0",
+      "orbit": "180deg 7deg 1.15m",
+      "guideVariant": "Dynamics / toe",
+      "guideLabels": [
+        {
+          "title": "Wheel heading",
+          "position": [
+            0.07482860459931719,
+            0.03765475077531532,
+            0.08216221015855514
+          ],
+          "reference": false,
+          "angle": false,
+          "axle": "front"
+        },
+        {
+          "title": "Centerline",
+          "position": [
+            -0.009190277352187262,
+            0.03765475077531532,
+            0.106
+          ],
+          "reference": true,
+          "angle": false,
+          "axle": "front"
+        },
+        {
+          "title": "+2.07°",
+          "position": [
+            0.11172224533309136,
+            0.03765475077531532,
+            -0.015781669973244435
+          ],
+          "reference": false,
+          "angle": true,
+          "axle": "front"
+        },
+        {
+          "title": "+2.07°",
+          "position": [
+            -0.13010280003746588,
+            0.03765475077531532,
+            -0.01548300963351004
+          ],
+          "reference": false,
+          "angle": true,
+          "axle": "front"
+        },
+        {
+          "title": "−0.50°",
+          "position": [
+            0.1087564602352594,
+            0.03765475077531532,
+            -0.34921218817093747
+          ],
+          "angle": true,
+          "axle": "rear"
+        },
+        {
+          "title": "−0.50°",
+          "position": [
+            -0.12660109807015404,
+            0.03765475077531532,
+            -0.3494272252317481
+          ],
+          "angle": true,
+          "axle": "rear"
+        }
+      ],
+      "axleViews": {
+        "front": {
+          "target": [
+            -0.009190277352187262,
+            0.03765475077531532,
+            -0.003632339803377237
+          ],
+          "orbit": "0deg 5deg .65m"
+        },
+        "rear": {
+          "target": [
+            -0.012156062450019225,
+            0.03512565529469827,
+            -0.3370628580010703
+          ],
+          "orbit": "0deg 5deg .65m"
+        },
+        "both": {
+          "target": [
+            0.07023935278417537,
+            0.025,
+            -0.17049692907209094
+          ],
+          "orbit": "180deg 7deg 1.15m"
+        }
+      }
+    },
+    {
+      "id": "anti-squat",
+      "title": "Rear anti-squat",
+      "description": "Rear anti-squat comes from the side-view suspension geometry. Gold marks the inboard pickup directions and their projections through the outboard joints; white marks the ground reference and the contact-patch line to the projected instant center. Pickup centers are approximated from the exported mesh. A percentage would also require the center of mass and drive-force assumptions, so none is shown.",
+      "category": "Geometry",
+      "position": [
+        0.0857564602352594,
+        0.03,
+        -0.27
+      ],
+      "target": [
+        0.0857564602352594,
+        0.01,
+        -0.27
+      ],
+      "normal": "0 1 0",
+      "orbit": "90deg 85deg .92m",
+      "guideVariant": "Dynamics / anti-squat",
+      "guideLabels": [
+        {
+          "title": "Projected pickup axes",
+          "position": [
+            0.1107564602352594,
+            0.02651606808484487,
+            -0.3044940728975891
+          ],
+          "reference": false,
+          "angle": false
+        },
+        {
+          "title": "Contact patch",
+          "position": [
+            0.1107564602352594,
+            -0.045680766789137225,
+            -0.33721218817093745
+          ],
+          "reference": true,
+          "angle": false
+        },
+        {
+          "title": "Side-view instant center",
+          "position": [
+            0.1107564602352594,
+            -0.022246827706853104,
+            -0.2277550740563127
+          ],
+          "reference": true,
+          "angle": false
+        }
+      ]
+    },
+    {
+      "id": "internal-ff-suspension-mount",
+      "title": "Front suspension mount — forward",
+      "description": "Printed chassis attachment for the front suspension.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.009217067621648312,
+        0.017507242245599634,
+        0.012552083935588603
+      ],
+      "target": [
+        -0.009217067621648312,
+        -0.005666402401402593,
+        0.012552083935588603
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-shock-shaft",
+      "title": "Shock Shaft",
+      "description": "Shaft or retaining hardware in the mechanical assembly.",
+      "category": "Suspension",
+      "position": [
+        -0.06000704777980452,
+        -0.012365319209411387,
+        -0.3606578116572531
+      ],
+      "target": [
+        -0.009224036581534013,
+        -0.020221843138814408,
+        -0.18159834401970834
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.9460405850100237m"
+    },
+    {
+      "id": "internal-suspension-ball",
+      "title": "Suspension Ball",
+      "description": "Articulated joint hardware in the suspension or steering assembly.",
+      "category": "Hardware",
+      "position": [
+        -0.0728006940630759,
+        0.005764015034900244,
+        -0.33991795898758725
+      ],
+      "target": [
+        -0.009185244088141455,
+        -0.01531262917987654,
+        -0.17029148440105724
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.9028335616340778m"
+    },
+    {
+      "id": "internal-steering-linkage-ball",
+      "title": "Steering Linkage Ball",
+      "description": "Articulated joint hardware in the suspension or steering assembly.",
+      "category": "Steering",
+      "position": [
+        0.052954229205076433,
+        -0.0020485184616262685,
+        -0.01893865977853177
+      ],
+      "target": [
+        -0.009301552226603595,
+        -0.009942571363171832,
+        -0.026853486484968395
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.3463449986325381m"
+    },
+    {
+      "id": "internal-shock",
+      "title": "Shock absorbers",
+      "description": "The four shock assemblies connect the suspension arms to the chassis mounts.",
+      "category": "Suspension",
+      "position": [
+        -0.040432113761976717,
+        0.007778856288448968,
+        -0.004326357690840871
+      ],
+      "target": [
+        -0.009034745524126673,
+        -0.010620332879173354,
+        -0.1832747438289835
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.9708214416182501m"
+    },
+    {
+      "id": "internal-shock-ball",
+      "title": "Shock Ball",
+      "description": "Articulated joint hardware in the suspension or steering assembly.",
+      "category": "Suspension",
+      "position": [
+        0.007784283012480693,
+        0.005942777461839795,
+        -0.005572846850187828
+      ],
+      "target": [
+        -0.009215061885562616,
+        -0.014112849188843743,
+        -0.18296234079428436
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.9553498678919085m"
+    },
+    {
+      "id": "internal-tie-rod",
+      "title": "Tie Rod",
+      "description": "Printed mounting part supporting the internal assembly.",
+      "category": "Steering",
+      "position": [
+        0.036011063209672,
+        0.0028428134960879524,
+        -0.3509187961803899
+      ],
+      "target": [
+        -0.008974976465456003,
+        -0.009461246677475554,
+        -0.3509612694899052
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.3850149418970906m"
+    },
+    {
+      "id": "internal-switch-mount",
+      "title": "Switch Mount",
+      "description": "Printed mounting part supporting the internal assembly.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.009215718135237694,
+        0.044823554784059506,
+        -0.16102291643619537
+      ],
+      "target": [
+        -0.009215718135237694,
+        0.03432355448603627,
+        -0.16102291643619537
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-upper-control-arm",
+      "title": "Upper control arms",
+      "description": "Upper wishbones locate the knuckles together with the lower control arms.",
+      "category": "Suspension",
+      "position": [
+        0.03165301558972855,
+        0.016395662510828687,
+        -0.006610290776834806
+      ],
+      "target": [
+        -0.009193773146043267,
+        0.007437244791780054,
+        -0.17162947065665596
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.9497339502522475m"
+    },
+    {
+      "id": "internal-rf-suspension-mount",
+      "title": "Rear suspension mount — forward",
+      "description": "Printed support around the rear suspension and drivetrain.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.009215717203914942,
+        0.017159951359033643,
+        -0.3249479283113033
+      ],
+      "target": [
+        -0.009215717203914942,
+        -0.005840048426762294,
+        -0.3249479283113033
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-battery-mount",
+      "title": "Battery Mount",
+      "description": "Printed mounting part supporting the internal assembly.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.00921571720391512,
+        0.029159953325986827,
+        -0.19289791584014898
+      ],
+      "target": [
+        -0.00921571720391512,
+        0.002159952651709273,
+        -0.19289791584014898
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.2649399906396866m"
+    },
+    {
+      "id": "internal-shock-spring-cover",
+      "title": "Shock spring covers",
+      "description": "Printed sleeves around the shock assemblies.",
+      "category": "Suspension",
+      "position": [
+        0.041451272823482335,
+        -0.0023159733587450196,
+        -0.002857808509905688
+      ],
+      "target": [
+        -0.009286770358619592,
+        -0.017557838494160368,
+        -0.18181944183717505
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.9722541316110673m"
+    },
+    {
+      "id": "internal-fr-suspension-mount",
+      "title": "Front suspension mount — rearward",
+      "description": "Printed chassis attachment for the front suspension.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.009215717203915015,
+        0.017159953221678858,
+        -0.017447915859520435
+      ],
+      "target": [
+        -0.009215717203915015,
+        -0.005840047262609009,
+        -0.017447915859520435
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-tie-rod-ball",
+      "title": "Tie Rod Ball",
+      "description": "Articulated joint hardware in the suspension or steering assembly.",
+      "category": "Steering",
+      "position": [
+        0.010784282349050045,
+        0.0020273283759164756,
+        -0.3528184354242875
+      ],
+      "target": [
+        -0.008932204393668021,
+        -0.009529356149554606,
+        -0.3509597009267777
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.3819253365387858m"
+    },
+    {
+      "id": "internal-front-knuckle-right",
+      "title": "Front Knuckle Right",
+      "description": "Printed upright locating the wheel hub and suspension joints.",
+      "category": "Suspension",
+      "position": [
+        -0.07724270245445328,
+        0.0010365862695432453,
+        -0.007527451125300844
+      ],
+      "target": [
+        -0.07724270245445328,
+        -0.012676222685955951,
+        -0.007527451125300844
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-steering-linkage-shaft",
+      "title": "Steering Linkage Shaft",
+      "description": "Shaft or retaining hardware in the mechanical assembly.",
+      "category": "Steering",
+      "position": [
+        -0.055195287581503244,
+        -0.0025917513034785598,
+        -0.026849643250428122
+      ],
+      "target": [
+        -0.009353911282953688,
+        -0.009816630759215603,
+        -0.026793515594753566
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.3515420911481018m"
+    },
+    {
+      "id": "internal-servo-shaft",
+      "title": "Servo Shaft",
+      "description": "Shaft or retaining hardware in the mechanical assembly.",
+      "category": "Steering",
+      "position": [
+        -0.009215717249045463,
+        -0.008336624622344958,
+        -0.0847141556441784
+      ],
+      "target": [
+        -0.009215717249045463,
+        -0.012836624868214153,
+        -0.0847141556441784
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-esc-mounting-bracket",
+      "title": "ESC Mounting Bracket",
+      "description": "Printed mounting part supporting the internal assembly.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.009212783537804824,
+        0.05915740269422532,
+        -0.20644791424274445
+      ],
+      "target": [
+        -0.009212783537804824,
+        0.042658677324652394,
+        -0.20644791424274445
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-front-knuckle-left",
+      "title": "Front Knuckle Left",
+      "description": "Printed upright locating the wheel hub and suspension joints.",
+      "category": "Suspension",
+      "position": [
+        0.05882136710632074,
+        0.001396603311324609,
+        -0.007579681869510848
+      ],
+      "target": [
+        0.05882136710632074,
+        -0.012317272802079483,
+        -0.007579681869510848
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-nice-rack-bro",
+      "title": "Steering rack",
+      "description": "The central steering mechanism connects the servo motion to the left and right steering links.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.009317200179171533,
+        -0.009736624106764732,
+        -0.061206144930437564
+      ],
+      "target": [
+        -0.009317200179171533,
+        -0.015536624006927222,
+        -0.061206144930437564
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-sg-90-shaft-2",
+      "title": "Servo linkage shaft",
+      "description": "A shaft in the steering-servo linkage.",
+      "category": "Hardware",
+      "position": [
+        -0.00921571720391509,
+        -0.009336623389273851,
+        -0.0847141593694687
+      ],
+      "target": [
+        -0.00921571720391509,
+        -0.014336623484268805,
+        -0.0847141593694687
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-front-shaft-retaining-pin",
+      "title": "Front Shaft Retaining Pin",
+      "description": "Shaft or retaining hardware in the mechanical assembly.",
+      "category": "Hardware",
+      "position": [
+        0.06383236509622435,
+        -0.00428238945843124,
+        -0.0033297258388244296
+      ],
+      "target": [
+        -0.009181289857767463,
+        -0.011473835112534676,
+        -0.003276079465692923
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.40009369964478475m"
+    },
+    {
+      "id": "internal-rr-suspension-mount",
+      "title": "Rear suspension mount — rearward",
+      "description": "Printed support around the rear suspension and drivetrain.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.00921571720391512,
+        0.02316066759824745,
+        -0.34994792449288076
+      ],
+      "target": [
+        -0.00921571720391512,
+        -0.002839690307155333,
+        -0.34994792449288076
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-right-rear-knuckle",
+      "title": "Right Rear Knuckle",
+      "description": "Printed upright locating the wheel hub and suspension joints.",
+      "category": "Suspension",
+      "position": [
+        -0.07640166161036557,
+        -0.00033709434759203027,
+        -0.3379480148404146
+      ],
+      "target": [
+        -0.07640166161036557,
+        -0.016309951385914016,
+        -0.3379480148404146
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-motor-mount-sled",
+      "title": "Motor Mount Sled",
+      "description": "Printed mounting part supporting the internal assembly.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.00921571720391512,
+        0.01690836993232364,
+        -0.25312791205942636
+      ],
+      "target": [
+        -0.00921571720391512,
+        -0.006215839181095417,
+        -0.25312791205942636
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-motor-mount-base",
+      "title": "Motor Mount Base",
+      "description": "Printed mounting part supporting the internal assembly.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.009215717203915258,
+        0.004659952104091586,
+        -0.25944791361689573
+      ],
+      "target": [
+        -0.009215717203915258,
+        -0.010090048192069205,
+        -0.25944791361689573
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-servo-mount-new",
+      "title": "Steering servo mount",
+      "description": "Printed bracket locating the steering servo.",
+      "category": "Steering",
+      "position": [
+        -0.00921571720391512,
+        0.00016337583959101683,
+        -0.07307791709899902
+      ],
+      "target": [
+        -0.00921571720391512,
+        -0.012338336091488619,
+        -0.07307791709899902
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-perf-board-mount",
+      "title": "Perf Board Mount",
+      "description": "Printed mounting part supporting the internal assembly.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.009218650870024811,
+        -0.009042907532304141,
+        -0.13344791531562808
+      ],
+      "target": [
+        -0.009218650870024811,
+        -0.016941477777436507,
+        -0.13344791531562808
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-left-rear-knuckle",
+      "title": "Left Rear Knuckle",
+      "description": "Printed upright locating the wheel hub and suspension joints.",
+      "category": "Suspension",
+      "position": [
+        0.058521668570774184,
+        0.0015309130500024389,
+        -0.3377250337765034
+      ],
+      "target": [
+        0.058521668570774184,
+        -0.014463025582559087,
+        -0.3377250337765034
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    },
+    {
+      "id": "internal-esc-mount",
+      "title": "ESC support",
+      "description": "Printed support for the speed controller.",
+      "category": "Mounts & supports",
+      "position": [
+        -0.00921571720391512,
+        0.03215995195508,
+        -0.21692291274666792
+      ],
+      "target": [
+        -0.00921571720391512,
+        0.024159952066838703,
+        -0.21692291274666792
+      ],
+      "normal": "0 1 0",
+      "orbit": "45deg 60deg 0.24m"
+    }
+  ],
+  "bounds": {
+    "min": [
+      -0.10682462155818939,
+      -0.04982191603984115,
+      -0.40244791284203535
+    ],
+    "max": [
+      0.08839318808168173,
+      0.07215995388105505,
+      0.11205208301544192
+    ]
+  },
+  "views": {
+    "drivetrain": {
+      "target": [
+        -0.008902032158486783,
+        -0.005840047728270348,
+        -0.29082162312864934
+      ],
+      "orbit": "45deg 60deg 0.37444828267808783m"
+    },
+    "cooling": {
+      "target": [
+        -0.009,
+        0.005,
+        -0.21
+      ],
+      "orbit": "45deg 55deg .82m"
+    },
+    "body": {
+      "target": [
+        -0.009,
+        0,
+        -0.15
+      ],
+      "orbit": "45deg 48deg 1.05m"
+    },
+    "dynamics": {
+      "target": [
+        -0.009,
+        -0.006,
+        -0.17
+      ],
+      "orbit": "30deg 65deg 1.05m"
+    },
+    "aero": {
+      "target": [
+        -0.009,
+        0.005,
+        -0.16
+      ],
+      "orbit": "35deg 68deg 1.0m"
+    }
+  },
+  "inventory": [
+    "controller",
+    "imu",
+    "battery",
+    "perfboard",
+    "logger",
+    "esc",
+    "wheel-speed",
+    "fan",
+    "fan-mount",
+    "motor",
+    "differential",
+    "shaft",
+    "halfshafts",
+    "internal-battery-mount",
+    "internal-esc-mounting-bracket",
+    "internal-esc-mount",
+    "internal-ff-suspension-mount",
+    "internal-fr-suspension-mount",
+    "internal-motor-mount-base",
+    "internal-motor-mount-sled",
+    "internal-perf-board-mount",
+    "internal-rf-suspension-mount",
+    "internal-rr-suspension-mount",
+    "internal-nice-rack-bro",
+    "internal-switch-mount",
+    "internal-servo-shaft",
+    "internal-steering-linkage-ball",
+    "internal-steering-linkage-shaft",
+    "steering",
+    "internal-servo-mount-new",
+    "internal-tie-rod",
+    "internal-tie-rod-ball",
+    "internal-front-knuckle-left",
+    "internal-front-knuckle-right",
+    "suspension",
+    "internal-left-rear-knuckle",
+    "rear-suspension",
+    "rear-hub",
+    "internal-right-rear-knuckle",
+    "internal-shock",
+    "internal-shock-ball",
+    "internal-shock-shaft",
+    "internal-shock-spring-cover",
+    "internal-upper-control-arm",
+    "magnet-pockets"
+  ],
+  "dynamicsGuideData": {
+    "counts": {
+      "caster": 38,
+      "kpi": 38,
+      "camber": 32,
+      "toe": 101,
+      "anti-squat": 51,
+      "ackermann": 38
+    },
+    "measurements": {
+      "caster": -0.17891784529559943,
+      "kpi": -0.18728071330740292,
+      "camber": -0.043490526876814165,
+      "toe": {
+        "left": -0.03612831551628262,
+        "right": 0.03612831551628262
+      }
+    },
+    "rearMeasurements": {
+      "caster": -0.06434912225896582,
+      "kpi": -0.1537886147841252,
+      "camber": -0.04986674154858803,
+      "toe": {
+        "left": 0.008726646260679129,
+        "right": -0.008726646259972888
+      }
+    },
+    "frontWheelHeadings": [
+      {
+        "id": "left",
+        "forward": [
+          0.0361204565840214,
+          0,
+          0.9993474433930183
+        ],
+        "staticToe": -0.03612831551628262
+      },
+      {
+        "id": "right",
+        "forward": [
+          -0.0361204565840214,
+          0,
+          0.9993474433930183
+        ],
+        "staticToe": 0.03612831551628262
+      }
+    ],
+    "rearWheelHeadings": [
+      {
+        "id": "left",
+        "hub": [
+          0.06875646023525939,
+          -0.013286161557405104,
+          -0.33721218817093745
+        ],
+        "forward": [
+          -0.008726535499081388,
+          0,
+          0.9999619230641651
+        ],
+        "heading": 0.008726646260679129
+      },
+      {
+        "id": "right",
+        "hub": [
+          -0.08660109807015404,
+          -0.015240766400226277,
+          -0.33742722523174806
+        ],
+        "forward": [
+          0.008726535498375175,
+          0,
+          0.9999619230641713
+        ],
+        "heading": -0.008726646259972888
+      }
+    ],
+    "frontJointCenters": {
+      "upper": [
+        0.05528617703226047,
+        0.0006203634601967571,
+        -0.005402907559953083
+      ],
+      "lower": [
+        0.060182647227418444,
+        -0.025218333067676926,
+        -0.0007299337982108042
+      ]
+    },
+    "hubAxis": [
+      0.9984012293355936,
+      0.043448392091469994,
+      -0.03615553188436664
+    ],
+    "ground": -0.045680766789137225,
+    "antiSquat": {
+      "pickups": [
+        [
+          [
+            0.0067915756585044985,
+            -0.01882170814153549,
+            -0.35102963633835327
+          ],
+          [
+            0.006791575658504433,
+            -0.018821708141535498,
+            -0.3238661866635085
+          ]
+        ],
+        [
+          [
+            0.006791911582608002,
+            0.014824423203458822,
+            -0.35027391190195106
+          ],
+          [
+            0.006734565073606034,
+            0.007170865352786127,
+            -0.32334938658737045
+          ]
+        ]
+      ],
+      "projected": [
+        {
+          "y": -0.030246827706853077,
+          "z": -0.33744733259890014,
+          "slope": -2.554496570563764e-16
+        },
+        {
+          "y": 0.0015160680848448707,
+          "z": -0.3394940728975891,
+          "slope": -0.2842597134489875
+        }
+      ],
+      "hasIC": true,
+      "instantCenter": [
+        0.1107564602352594,
+        -0.030246827706853104,
+        -0.2277550740563127
+      ]
+    }
+  },
+  "steeringData": {
+    "geometry": {
+      "track": 0.16182504537055722,
+      "wheelbase": 0.3336873668979655,
+      "centerX": -0.009190277352187262,
+      "frontZ": -0.003632339803377237,
+      "rearZ": -0.33731970670134276,
+      "leftHub": [
+        0.07172224533309135,
+        -0.010757066076788061,
+        -0.0037816699732444344
+      ],
+      "rightHub": [
+        -0.09010280003746587,
+        -0.01107772522295567,
+        -0.00348300963351004
+      ],
+      "mechanism": {
+        "pivot": [
+          -0.009215717249045463,
+          -0.012836624868214153,
+          -0.0847141556441784
+        ],
+        "maxRackAngle": 0.13962634015954636,
+        "sides": [
+          {
+            "id": "right",
+            "pivot": [
+              -0.07610859607185336,
+              -0.01265721855341538,
+              -0.003003244061320137
+            ],
+            "axis": [
+              0.18300980791176888,
+              0.9674171742281802,
+              -0.1749611991741594
+            ],
+            "inner": [
+              -0.03881702820711608,
+              -0.011806701542809857,
+              -0.034773902904476725
+            ],
+            "outer": [
+              -0.07155764081343019,
+              -0.008897674283996761,
+              -0.018934283973875518
+            ],
+            "forward": [
+              -0.0361204565840214,
+              0,
+              0.9993474433930183
+            ],
+            "staticToe": 0.03612831551628262,
+            "length": 0.03648703442725803
+          },
+          {
+            "id": "left",
+            "pivot": [
+              0.05773441212983946,
+              -0.012298984803740084,
+              -0.0030664206790819437
+            ],
+            "axis": [
+              -0.18331636624443703,
+              0.9673613372887566,
+              -0.17494900109987396
+            ],
+            "inner": [
+              0.02018313116184275,
+              -0.01180670154280961,
+              -0.03465433356410985
+            ],
+            "outer": [
+              0.05295422920479751,
+              -0.008570766905391106,
+              -0.018938659778324162
+            ],
+            "forward": [
+              0.0361204565840214,
+              0,
+              0.9993474433930183
+            ],
+            "staticToe": -0.03612831551628262,
+            "length": 0.036488334333863885
+          }
+        ]
+      }
+    },
+    "sides": [
+      {
+        "id": "right",
+        "hub": [
+          -0.09010280003746587,
+          -0.01107772522295567,
+          -0.00348300963351004
+        ],
+        "pivot": [
+          -0.07610859607185336,
+          -0.01265721855341538,
+          -0.003003244061320137
+        ],
+        "axis": [
+          0.18300980791176888,
+          0.9674171742281802,
+          -0.1749611991741594
+        ],
+        "members": [
+          "Front Knuckle Right",
+          "Tyre",
+          "Steering Linkage Ball",
+          "Front Wheel Hub",
+          "Front Shaft Retaining Pin"
+        ]
+      },
+      {
+        "id": "left",
+        "hub": [
+          0.07172224533309135,
+          -0.010757066076788061,
+          -0.0037816699732444344
+        ],
+        "pivot": [
+          0.05773441212983946,
+          -0.012298984803740084,
+          -0.0030664206790819437
+        ],
+        "axis": [
+          -0.18331636624443703,
+          0.9673613372887566,
+          -0.17494900109987396
+        ],
+        "members": [
+          "Front Wheel Hub",
+          "Steering Linkage Ball",
+          "Front Knuckle Left",
+          "Hall Effect Sensor Mount",
+          "Front Shaft Retaining Pin",
+          "Tyre"
+        ]
+      }
+    ],
+    "rearWheels": [
+      {
+        "id": "left",
+        "hub": [
+          0.06875646023525939,
+          -0.013286161557405104,
+          -0.33721218817093745
+        ],
+        "forward": [
+          -0.008726535499081388,
+          0,
+          0.9999619230641651
+        ],
+        "heading": 0.008726646260679129
+      },
+      {
+        "id": "right",
+        "hub": [
+          -0.08660109807015404,
+          -0.015240766400226277,
+          -0.33742722523174806
+        ],
+        "forward": [
+          0.008726535498375175,
+          0,
+          0.9999619230641713
+        ],
+        "heading": -0.008726646259972888
+      }
+    ],
+    "animation": "Steering",
+    "limit": 135,
+    "guideCount": 38
+  },
+  "rearAlignment": [
+    {
+      "side": "left",
+      "degrees": -0.5000000000405356,
+      "rotation": -0.021554494356923522,
+      "pivot": [
+        0.057258491626670655,
+        -0.014365379811004103,
+        -0.33847070274824465
+      ],
+      "axis": [
+        -0.152873498967212,
+        0.9862004028335197,
+        -0.0635488691050087
+      ],
+      "members": [
+        "Tie Rod Ball",
+        "Rear Wheel Hub",
+        "Tyre",
+        "Left Rear Knuckle"
+      ]
+    },
+    {
+      "side": "right",
+      "degrees": -0.5000000000000709,
+      "rotation": 0.006843277709974247,
+      "pivot": [
+        -0.0751339927289756,
+        -0.01624865766925935,
+        -0.33868271773056596
+      ],
+      "axis": [
+        0.14465022522213566,
+        0.9865151876248095,
+        -0.07657739176005036
+      ],
+      "members": [
+        "Tyre",
+        "Right Rear Knuckle",
+        "Rear Wheel Hub",
+        "Tie Rod Ball"
+      ]
+    }
+  ]
+}
