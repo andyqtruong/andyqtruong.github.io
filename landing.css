@@ -24,3 +24,15 @@ body{background-image:var(--paper-grid)}
 .project-visual.engineering-drawing{background:var(--bg);padding:18px 30px}
 .engineering-drawing img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
 .project-card:hover .engineering-drawing{background:var(--surface)}
+
+/* Both layers share one source and one image box: the car cannot drift during the wipe. */
+.drawing-filter-defs{position:absolute;overflow:hidden;pointer-events:none}
+.project-visual.car-visual.engineering-drawing{padding:18px 30px}
+.psr-isometric{position:relative;width:100%;height:100%;isolation:isolate}
+.psr-isometric .psr-line-drawing{filter:url(#psr-isometric-lines);mix-blend-mode:multiply}
+.psr-render-reveal{position:absolute;inset:0;clip-path:inset(0 100% 0 0);transition:clip-path .55s cubic-bezier(.22,.61,.36,1);pointer-events:none}
+.project-card:is(:hover,:focus-visible) .psr-render-reveal{clip-path:inset(0)}
+@media(prefers-reduced-motion:reduce){.psr-render-reveal{transition:none}}
+
+.psr-isometric{background:var(--bg)}
+.psr-isometric svg{display:block;width:100%;height:100%;overflow:hidden}
