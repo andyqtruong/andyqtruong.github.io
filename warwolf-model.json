@@ -1,0 +1,136 @@
+{
+  "bounds": {
+    "min": [
+      -0.7796562314033508,
+      0.024986529722809746,
+      -0.2804117812775077
+    ],
+    "max": [
+      0.16729244409271637,
+      0.7781996853228763,
+      0.1686388240195811
+    ]
+  },
+  "decoratedFaces": 3,
+  "panels": [
+    {
+      "node": "Left side panel",
+      "material": "Royal blue panel with burnt orange helmet"
+    },
+    {
+      "node": "Part 23",
+      "material": "Front: FRONT TOWARD ENEMY"
+    },
+    {
+      "node": "Right side panel",
+      "material": "Left viewed from front: fire artwork"
+    }
+  ],
+  "animation": {
+    "name": "Launch",
+    "duration": 6.5,
+    "keyframes": 196,
+    "pivot": [
+      -0.3613817074,
+      0.063571032,
+      0.4911075573
+    ],
+    "weightCenter": [
+      -0.6929967214,
+      0.063571032,
+      0.7147847216
+    ],
+    "shortArmLength": 0.3999999891743866,
+    "initialAngle": -0.5934119727133598,
+    "peakAngle": 1.6580627893946132,
+    "releaseTime": 1.87,
+    "slingLength": 0.3958614025135565,
+    "restingBall": [
+      -0.24,
+      0.063571032,
+      0.0685
+    ],
+    "referenceVideo": "IMG_2575.mov",
+    "bounds": {
+      "min": [
+        -1.2208839184838198,
+        -0.2719821921365231,
+        -0.28041178127750754
+      ],
+      "max": [
+        0.530530797286785,
+        1.54265818913967,
+        0.16863882401958108
+      ]
+    }
+  },
+  "labels": [
+    {
+      "id": "arm",
+      "title": "Trebuchet arm",
+      "position": [
+        0.015,
+        0.063571,
+        0.246
+      ],
+      "moving": true,
+      "description": "The long arm carries the sling; the short arm is driven by the falling counterweight."
+    },
+    {
+      "id": "sling",
+      "title": "Sling",
+      "position": [
+        -0.24,
+        0.063571032,
+        0.0685
+      ],
+      "moving": "sling",
+      "description": "A facemask pouch rests on the baseplate inside the frame. The arm pulls it outward, then the sling sweeps up around the tip. One keyring stays attached; the other slips off the angled release pin."
+    },
+    {
+      "id": "projectile",
+      "title": "Tennis ball projectile",
+      "position": [
+        -0.24,
+        0.063571032,
+        0.0685
+      ],
+      "moving": "projectile",
+      "description": "A representative 67 mm tennis ball held in the sling. It launches out of frame and reappears when the arm resets. The flight is exaggerated for the animation."
+    },
+    {
+      "id": "counterweight",
+      "title": "Counterweight",
+      "position": [
+        -0.692997,
+        0.215,
+        0.715
+      ],
+      "moving": true,
+      "description": "The counterweight drops vertically and rotates the arm while the main pivot rolls along the horizontal tracks."
+    },
+    {
+      "id": "vertical",
+      "title": "Vertical track",
+      "position": [
+        -0.701,
+        -0.044,
+        0.57
+      ],
+      "moving": false,
+      "description": "The vertical guide constrains the counterweight axle as the weight falls."
+    },
+    {
+      "id": "horizontal",
+      "title": "Horizontal track",
+      "position": [
+        -0.49,
+        -0.025,
+        0.468
+      ],
+      "moving": false,
+      "description": "The horizontal tracks support the rolling pivot, allowing it to move as the arm rotates."
+    }
+  ],
+  "hiddenPanelPrimitives": 20
+}
