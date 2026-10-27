@@ -1,10 +1,10 @@
 /* A clipped duplicate gives text and icons the same synchronized wipe as the home-page name. */
 (()=>{
- const selector='button,a[href],summary', layers=new WeakMap(), pending=new Set();
+ const selector='button:not(.model-hotspot),a[href],summary', layers=new WeakMap(), pending=new Set();
  const layout=['display','box-sizing','padding-top','padding-right','padding-bottom','padding-left','border-top-width','border-right-width','border-bottom-width','border-left-width','font-size','font-weight','font-style','line-height','letter-spacing','word-spacing','text-transform','text-align','white-space','overflow-wrap','word-break','align-items','align-content','justify-content','justify-items','flex-direction','flex-wrap','column-gap','row-gap','grid-template-columns','grid-template-rows'];
  let serial=0,frame=0;
  function sync(action){
-  if(!action.isConnected)return;
+  if(!action.isConnected||action.closest('model-viewer'))return;
   let layer=layers.get(action);
   if(!layer){layer=document.createElement('span');layer.className='psr-action-reveal';layer.setAttribute('aria-hidden','true');layer.setAttribute('inert','');layers.set(action,layer);}
   const style=getComputedStyle(action);
@@ -33,13 +33,13 @@
   if(layer.parentNode!==action)action.append(layer);
  }
  function flush(){frame=0;for(const action of pending)sync(action);pending.clear();}
- function queue(action){if(!action||action.closest('.psr-action-reveal'))return;pending.add(action);if(!frame)frame=requestAnimationFrame(flush);}
+ function queue(action){if(!action||action.closest('.psr-action-reveal,model-viewer'))return;pending.add(action);if(!frame)frame=requestAnimationFrame(flush);}
  const resize=new ResizeObserver(entries=>{for(const entry of entries)queue(entry.target);});
  function enhance(root){
   if(!(root instanceof Element)||root.closest('.psr-action-reveal'))return;
   const items=[...(root.matches(selector)?[root]:[]),...root.querySelectorAll(selector)];
   for(const action of items){
-   if(action.closest('.psr-action-reveal'))continue;
+   if(action.closest('.psr-action-reveal,model-viewer'))continue;
    if(!action.hasAttribute('data-psr-action'))action.setAttribute('data-psr-action','');
    resize.observe(action);
    queue(action);
