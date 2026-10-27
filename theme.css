@@ -1,3 +1,5 @@
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@1&display=swap');
+
 /* Shared navy and white palette. */
 :root {
   --bg:#081526; --ink:#f6f8fc; --muted:#b4c3d7; --accent:#b8d7ff;
