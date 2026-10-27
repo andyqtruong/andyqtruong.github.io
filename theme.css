@@ -1,11 +1,11 @@
-@font-face{font-family:'Motiva Sans';src:local('Motiva Sans Regular'),url('https://store.akamai.steamstatic.com/public/shared/fonts/MotivaSans-Regular.woff.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:'Motiva Sans';src:local('Motiva Sans Bold'),url('https://store.akamai.steamstatic.com/public/shared/fonts/MotivaSans-Bold.woff.ttf') format('truetype');font-style:normal;font-weight:700;font-display:swap}
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800&display=swap');
 
-/* Shared navy and white palette. */
-:root {
-  --bg:#081526; --ink:#f6f8fc; --muted:#b4c3d7; --accent:#b8d7ff;
-  --line:#2a3d56; --dark:#0d2038; --surface:#142a45;
-  --gold-shadow:#3c6489; --gold-light:#e2efff; --gold-mid:#8db9ec; --gold-highlight:#b8d7ff;
-  --chart-blue:#8db9ec; --image-ink:#081526; --image-line:#7e96b3;
-  --panel-car:#142a45; --panel-trebuchet:#142a45; --panel-wind:#142a45;
+/* Cream engineering paper with green rules and a quiet major grid. */
+:root{
+ --bg:#f8f5e8;--ink:#183d31;--muted:#496653;--accent:#2d6546;
+ --line:#b4c7a4;--dark:#edf0dc;--surface:#e7edda;
+ --gold-shadow:#254d34;--gold-light:#376b43;--gold-mid:#386e47;--gold-highlight:#285838;
+ --chart-blue:#2c6580;--image-ink:#183d31;--image-line:#779578;
+ --panel-car:#e7edda;--panel-trebuchet:#edf0dc;--panel-wind:#e7edda;
+ --paper-grid:linear-gradient(90deg,transparent 51px,#71966d40 51px,#71966d40 52px,transparent 52px),repeating-linear-gradient(0deg,#698f6326 0 1px,transparent 1px 100px),repeating-linear-gradient(90deg,#698f6326 0 1px,transparent 1px 100px),repeating-linear-gradient(0deg,#86a77a24 0 1px,transparent 1px 20px),repeating-linear-gradient(90deg,#86a77a24 0 1px,transparent 1px 20px);
 }
