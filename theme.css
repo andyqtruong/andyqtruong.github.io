@@ -1,23 +1,8 @@
-/* THE PALETTE — change these values to recolor the whole website.
-   Keep --ink and --muted readable against --bg.
-   Layout and typography live separately in style.css. */
+/* Shared navy and white palette. */
 :root {
-  --chart-blue: #999999;     /* Bungee chart low end: neutral gray */
-  --bg: #090909;             /* Black page background */
-  --ink: #ffffff;            /* White primary text */
-  --muted: #ffffff;          /* White secondary text */
-  --gold-shadow: #ae8625;
-  --gold-light: #f7ef8a;
-  --gold-mid: #d2ac47;
-  --gold-highlight: #edc967;
-  --accent: #ffdc45;         /* Bright gold links and highlights */
-  --line: #363636;           /* Neutral dividers */
-  --dark: #111111;           /* Near-black controls */
-  --surface: #f0f0f0;        /* Light gallery backgrounds */
-  --image-ink: #090909;
-  --image-line: #777777;
-  --panel-car: #ebebeb;
-  --panel-trebuchet: #eeeae0;
-  --panel-wind: #e5e5e5;
-  --panel-bungee: #e8e8e8;
+  --bg:#081526; --ink:#f6f8fc; --muted:#b4c3d7; --accent:#b8d7ff;
+  --line:#2a3d56; --dark:#0d2038; --surface:#142a45;
+  --gold-shadow:#3c6489; --gold-light:#e2efff; --gold-mid:#8db9ec; --gold-highlight:#b8d7ff;
+  --chart-blue:#8db9ec; --image-ink:#081526; --image-line:#7e96b3;
+  --panel-car:#142a45; --panel-trebuchet:#142a45; --panel-wind:#142a45;
 }
