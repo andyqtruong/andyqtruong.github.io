@@ -747,7 +747,7 @@ body{background-image:var(--paper-grid)}
 .case-page .cord-options button:is(:hover,:focus-visible,[aria-pressed=true]){background:#71966d20}
 
 /* Override legacy metallic text effects with solid, readable action states. */
-body :is(a,button:enabled:not(.steering-dial):not(.model-guide-label):not(.warwolf-hotspot),summary):is(:hover,:focus-visible){background-color:var(--ink)!important;color:#fff!important;background-image:none!important;background-clip:border-box;-webkit-background-clip:border-box;text-decoration:none;animation:none}
-body :is(a,button:enabled:not(.steering-dial):not(.model-guide-label):not(.warwolf-hotspot),summary):is(:hover,:focus-visible) span{background:none!important;color:#fff!important;animation:none!important;filter:none!important}
+body:not(.psr-page) :is(a,button:enabled:not(.steering-dial):not(.model-guide-label):not(.warwolf-hotspot),summary):is(:hover,:focus-visible){background-color:var(--ink)!important;color:#fff!important;background-image:none!important;background-clip:border-box;-webkit-background-clip:border-box;text-decoration:none;animation:none}
+body:not(.psr-page) :is(a,button:enabled:not(.steering-dial):not(.model-guide-label):not(.warwolf-hotspot),summary):is(:hover,:focus-visible) span{background:none!important;color:#fff!important;animation:none!important;filter:none!important}
 
 .menu-toggle:is(:hover,:focus-visible) .menu-lines i{background:#fff}

@@ -1,0 +1,23 @@
+/* PSR9000 typography: family only, so existing bold weights stay intact. */
+body.psr-page,body.psr-page :where(*){font-family:'Century Gothic','Gothic A1','URW Gothic',Arial,sans-serif!important}
+
+/* Each overlay mirrors the native control, including its padding and text layout. */
+.psr-page [data-psr-action]{isolation:isolate}
+body.psr-page [data-psr-action],body.psr-page [data-psr-action]:is(:hover,:focus-visible){
+ background-color:transparent!important;background-image:none!important;color:var(--ink)!important;
+ background-clip:border-box!important;-webkit-background-clip:border-box!important;
+ animation:none!important;box-shadow:none!important;text-decoration:none!important;
+}
+body.psr-page [data-psr-action]:is(:hover,:focus-visible):not(:disabled){opacity:1!important}
+body.psr-page [data-psr-action] span{background-image:none!important;color:inherit!important;animation:none!important;filter:none!important}
+body.psr-page [data-psr-action]>.psr-action-reveal{
+ position:absolute;inset:0;z-index:2;pointer-events:none;user-select:none;
+ background:#183d31!important;color:#fff!important;border-radius:inherit;
+ clip-path:inset(0 100% 0 0);transition:clip-path .55s cubic-bezier(.22,.61,.36,1);
+ --ink:#fff;--muted:#fff;--accent:#fff;--gold-mid:#fff;--bg:#183d31;
+}
+.psr-page [data-psr-action]:is(:hover,:focus-visible):not(:disabled)>.psr-action-reveal{clip-path:inset(0)}
+body.psr-page [data-psr-action]>.psr-action-reveal :where(span){color:inherit!important;background-image:none!important}
+.psr-page .menu-toggle:is(:hover,:focus-visible) .menu-lines i{background:var(--ink)}
+.psr-page [data-psr-action]:focus-visible{outline:2px solid #183d31;outline-offset:5px}
+@media(prefers-reduced-motion:reduce){body.psr-page [data-psr-action]>.psr-action-reveal{transition:none}}
