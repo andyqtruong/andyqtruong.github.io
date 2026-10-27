@@ -29,10 +29,14 @@ body{background-image:var(--paper-grid)}
 .drawing-filter-defs{position:absolute;overflow:hidden;pointer-events:none}
 .project-visual.car-visual.engineering-drawing{padding:18px 30px}
 .psr-isometric{position:relative;width:100%;height:100%;isolation:isolate}
-.psr-isometric .psr-line-drawing{filter:url(#psr-isometric-lines);mix-blend-mode:multiply}
+.psr-isometric .psr-line-drawing{filter:url(#psr-isometric-lines)}
 .psr-render-reveal{position:absolute;inset:0;clip-path:inset(0 100% 0 0);transition:clip-path .55s cubic-bezier(.22,.61,.36,1);pointer-events:none}
 .project-card:is(:hover,:focus-visible) .psr-render-reveal{clip-path:inset(0)}
 @media(prefers-reduced-motion:reduce){.psr-render-reveal{transition:none}}
 
-.psr-isometric{background:var(--bg)}
+.psr-isometric{background:transparent}
 .psr-isometric svg{display:block;width:100%;height:100%;overflow:hidden}
+
+/* Transparent paper-backed display in both states; keep the CAD silhouette intact. */
+.project-visual.car-visual.engineering-drawing,.project-card:hover .car-visual.engineering-drawing{background:transparent}
+.psr-render-reveal svg{filter:url(#psr-cutout-clean)}
