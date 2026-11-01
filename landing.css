@@ -38,3 +38,8 @@ body{background-image:var(--paper-grid)}
 .project-caption{padding:10px 12px;transition:background-color .18s ease,color .18s ease}
 .project-card:is(:hover,:focus-visible) .project-caption{background:var(--ink);color:#fff}
 .project-card:is(:hover,:focus-visible) .project-caption p{color:#fff}
+
+/* Keep the portrait in the existing frame, with the face visible at every size. */
+.portrait-photo{aspect-ratio:4/5;overflow:hidden;border:1px solid #a7be9d}
+.portrait-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%}
+@media(max-width:600px){.portrait-photo{aspect-ratio:1/1}}
